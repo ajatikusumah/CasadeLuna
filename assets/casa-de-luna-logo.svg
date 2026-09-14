@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 230" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 340" role="img" aria-labelledby="title desc">
   <title id="title">Casa de Luna</title>
   <desc id="desc">Crescent moon with a cat silhouette and the Casa de Luna wordmark</desc>
-  <g fill="#132b45">
-    <path d="M155 20c-52 13-87 60-83 115 4 53 47 91 100 91 25 0 48-9 66-24-14 5-30 7-46 5-53-6-90-53-84-106 5-37 24-66 47-81z"/>
-    <path d="M111 138l13-17 15 16c15 4 26 17 26 32 0 20-20 36-45 36s-45-16-45-36c0-14 13-27 36-31zm-12 38c5 0 9-4 9-9s-4-9-9-9-9 4-9 9 4 9 9 9zm42 0c5 0 9-4 9-9s-4-9-9-9-9 4-9 9 4 9 9 9z" fill="#fbf7ef"/>
+  <g fill="#111111">
+    <path d="M285 24c-71 13-124 74-124 147 0 83 66 150 149 150 39 0 75-15 101-39-17 6-36 8-55 6-76-7-132-73-124-149 5-48 26-88 53-115z"/>
+    <path d="M205 205l20-26 23 25c24 7 42 27 42 52 0 33-31 59-70 59s-70-26-70-59c0-24 20-44 55-51zm-20 61c8 0 14-6 14-14s-6-14-14-14-14 6-14 14 6 14 14 14zm65 0c8 0 14-6 14-14s-6-14-14-14-14 6-14 14 6 14 14 14z"/>
   </g>
-  <text x="240" y="145" fill="#132b45" font-family="Georgia, 'Times New Roman', serif" font-size="66" letter-spacing="16">CASA DE LUNA</text>
+  <text x="430" y="218" fill="#111111" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="91" font-weight="300" letter-spacing="24">CASA DE LUNA</text>
 </svg>
