@@ -18,4 +18,4 @@ This first version is a responsive static website built with plain HTML, CSS, an
 
 ## Replace demo content
 
-The hero, cat profile, and story photographs currently use remote Unsplash images for the prototype. They can be replaced with the Casa de Luna photographs from the Drive folder without changing the page structure.
+The photographs currently use remote Unsplash images for the prototype. They can be replaced with Casa de Luna photographs after confirming that the selected images may be published in the public repository.
