@@ -132,3 +132,34 @@ h1 em, h2 em { color: var(--terracotta); font-style: normal; }
   .brand-logo { width: 215px; height: 48px; }
   .footer-logo { width: 230px; height: 58px; }
 }
+
+
+/* Final navigation, tagline, Pet Care and Shop adjustments */
+.brand { flex-direction: column; align-items: flex-start; gap: 2px; }
+.brand-tagline { color: var(--terracotta); font-family: var(--sans); font-size: 8px; font-weight: 700; letter-spacing: .12em; line-height: 1; white-space: nowrap; }
+.hero-tagline { margin: -14px 0 27px; color: var(--terracotta); font-family: var(--script); font-size: 22px; line-height: 1.05; }
+.pet-care { display: grid; grid-template-columns: 76px 1fr auto; align-items: center; gap: 20px; padding: 44px 8vw; border-bottom: 1px solid var(--line); }
+.pet-care-icon { display: grid; place-items: center; width: 57px; height: 57px; border: 1px solid var(--gold); border-radius: 50%; color: var(--terracotta); font-size: 31px; }
+.pet-care .eyebrow { margin-bottom: 7px; }
+.pet-care h2 { margin: 0; color: var(--navy); font-size: clamp(20px, 2.25vw, 31px); }
+.pet-care .button { min-width: 175px; }
+.shop-section { padding: 82px 7vw 88px; border-top: 1px solid var(--line); }
+.shop-badge { padding: 8px 13px; border: 1px solid var(--gold); border-radius: 999px; color: var(--terracotta); font-size: 10px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+.shop-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.shop-card { position: relative; min-height: 250px; padding: 28px 24px 22px; background: #fffdfa; border: 1px solid var(--line); box-shadow: 0 12px 28px rgba(19,43,69,.06); }
+.shop-number { color: var(--gold); font-family: var(--serif); font-size: 18px; }
+.shop-card h3 { margin: 28px 0 9px; color: var(--navy); font-family: var(--serif); font-size: 24px; line-height: 1.05; }
+.shop-card p { min-height: 62px; color: #59636c; font-size: 13px; }
+.shop-card .text-link { margin-top: 10px; }
+@media (max-width: 760px) {
+  .brand-tagline { font-size: 7px; }
+  .hero-tagline { font-size: 20px; }
+  .pet-care { grid-template-columns: 48px 1fr; gap: 13px; padding: 38px 7vw; }
+  .pet-care-icon { width: 45px; height: 45px; font-size: 25px; }
+  .pet-care h2 br { display: none; }
+  .pet-care .button { grid-column: 2; justify-self: start; min-height: 38px; padding: 9px 15px; }
+  .shop-section { padding: 61px 7vw 71px; }
+  .shop-grid { grid-template-columns: 1fr; gap: 12px; }
+  .shop-card { min-height: auto; }
+  .shop-card p { min-height: auto; }
+}
