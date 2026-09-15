@@ -1,21 +1,24 @@
 # Casa de Luna
 
-Website concept for Casa de Luna cat shelter.
+Website multi-halaman Casa de Luna, shelter kucing di Bogor.
 
-## Current version
+## Struktur halaman
 
-This first version is a responsive static website built with plain HTML, CSS, and JavaScript so it can be published directly through GitHub Pages without a build step.
+- Beranda
+- Tentang
+- Kucing
+- Cerita / Stories of de Luna
+- Pet Care
+- Shop
+- Dukung
+- Kontak
 
-## Sections
+Setiap menu membuka halaman tersendiri. Logo menggunakan aset PNG di `assets/Casa_de_Luna_logo.png`, dengan styling crop dan blend agar kanvas putih sumber tidak tampil sebagai kotak.
 
-- Beranda and shelter message
-- Stories of de Luna
-- Cat profiles with status filter
-- Adoption, donation, foster, and volunteer pathways
-- Casa de Luna Pet Hotel
-- Cat care and educational stories
-- About and contact
+## Kontak sementara
 
-## Replace demo content
+- Instagram: [@Casadeluna19](https://www.instagram.com/casadeluna19/)
+- Email: hello@casadeluna.id
+- WhatsApp: +62 813 8988 8900
 
-The photographs currently use remote Unsplash images for the prototype. They can be replaced with Casa de Luna photographs after confirming that the selected images may be published in the public repository.
+Data rekening, QRIS, tarif, angka dampak, dan detail kebijakan adopsi masih berupa informasi yang perlu dikonfirmasi Casa de Luna.
