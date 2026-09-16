@@ -1,0 +1,74 @@
+[
+  {
+    "image": "assets/photos/casa-cat-01.jpg",
+    "alt": "Dua kucing Casa de Luna saling menemani",
+    "caption": "Dua teman seperawatan",
+    "source": "Stories of de Luna",
+    "raised": false,
+    "visible": true
+  },
+  {
+    "image": "assets/photos/casa-cat-02.jpg",
+    "alt": "Kucing-kucing Casa de Luna di ruang perawatan",
+    "caption": "Saling menemani",
+    "source": "Stories of de Luna",
+    "raised": true,
+    "visible": true
+  },
+  {
+    "image": "assets/photos/casa-cat-03.jpg",
+    "alt": "Dua kucing Casa de Luna berdekatan",
+    "caption": "Di rumah rembulan",
+    "source": "Stories of de Luna",
+    "raised": false,
+    "visible": true
+  },
+  {
+    "image": "assets/photos/anabul-studio-01.jpg",
+    "alt": "Kucing tabby Casa de Luna dalam sesi foto",
+    "caption": "Menunggu dengan tenang",
+    "source": "Photos Anabul",
+    "raised": true,
+    "visible": true
+  },
+  {
+    "image": "assets/photos/anabul-studio-02.jpg",
+    "alt": "Dua kucing Casa de Luna duduk bersama",
+    "caption": "Dua sahabat di rumah",
+    "source": "Photos Anabul",
+    "raised": false,
+    "visible": true
+  },
+  {
+    "image": "assets/photos/anabul-studio-03.jpg",
+    "alt": "Dua kucing berbulu panjang Casa de Luna",
+    "caption": "Saling menemani",
+    "source": "Photos Anabul",
+    "raised": true,
+    "visible": true
+  },
+  {
+    "image": "assets/photos/anabul-studio-04.jpg",
+    "alt": "Dua kucing Casa de Luna berdampingan",
+    "caption": "Wajah-wajah rumah",
+    "source": "Photos Anabul",
+    "raised": false,
+    "visible": true
+  },
+  {
+    "image": "assets/photos/anabul-studio-05.jpg",
+    "alt": "Dua kucing Casa de Luna dalam potret studio",
+    "caption": "Bersama di studio",
+    "source": "Photos Anabul",
+    "raised": true,
+    "visible": true
+  },
+  {
+    "image": "assets/photos/anabul-studio-06.jpg",
+    "alt": "Empat kucing Casa de Luna dalam satu potret",
+    "caption": "Satu rumah, banyak cerita",
+    "source": "Photos Anabul",
+    "raised": false,
+    "visible": true
+  }
+]
