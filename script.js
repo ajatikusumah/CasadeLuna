@@ -37,6 +37,17 @@ if(galleryContainers.length){
   }).catch(()=>{});
 }
 
+const catsContainer=document.querySelector("[data-cats]");
+if(catsContainer){fetch("content/cats.json").then(r=>r.ok?r.json():Promise.reject()).then(items=>{
+  catsContainer.replaceChildren(...items.filter(item=>item.image).map(item=>{
+    const article=document.createElement("article");article.className="profile-card";article.id=item.id;
+    const avatar=document.createElement("div");avatar.className=`cat-avatar ${item.avatarClass||""}`;const image=document.createElement("img");image.src=item.image;image.alt=item.alt||item.name;image.loading="lazy";avatar.append(image);article.append(avatar);
+    const body=document.createElement("div");body.className="profile-body";const status=document.createElement("span");status.className=`status${item.status==="Dalam perawatan"?" status--care":""}`;status.textContent=item.status||"Dalam perawatan";body.append(status);
+    const title=document.createElement("h2");title.textContent=item.name;body.append(title);const meta=document.createElement("p");meta.className="profile-meta";meta.textContent=item.meta||"Kucing Casa de Luna";body.append(meta);const bio=document.createElement("p");bio.textContent=item.bio||"";body.append(bio);
+    const link=document.createElement("a");link.className=`button button--small ${item.status==="Siap diadopsi"?"button--dark":"button--outline"}`;link.href=item.status==="Siap diadopsi"?`https://wa.me/6281389888900?text=${encodeURIComponent(`Halo Casa de Luna, saya ingin kenalan dengan ${item.name}.`)}`:"dukung.html#virtual";link.textContent=item.status==="Siap diadopsi"?`Aku mau kenalan dengan ${item.name} →`:`Dukung ${item.name} secara virtual →`;body.append(link);article.append(body);return article;
+  }));
+}).catch(()=>{});}
+
 // Apply editable copy to every public menu without changing the hand-designed layout.
 fetch("content/settings.json").then(r=>r.ok?r.json():Promise.reject()).then(settings=>{
   const p=settings.pages||{}, home=settings.home||{}, id=settings.identity||{}, contact=settings.contact||{};
