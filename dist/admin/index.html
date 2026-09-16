@@ -16,12 +16,11 @@
       <img src="../assets/casa-de-luna-logo.svg" alt="Casa de Luna" />
       <p class="eyebrow">Casa de Luna · admin</p>
       <h1 id="login-title">Selamat datang<br /><em>di ruang kerja.</em></h1>
-      <p id="login-description">Buat PIN admin untuk mengunci ruang pengelolaan di perangkat ini.</p>
+      <p id="login-description">Masukkan kata sandi admin untuk melanjutkan.</p>
       <form id="login-form">
         <label>Nama pengguna<input id="login-user" type="text" value="admin" autocomplete="username" required /></label>
-        <label id="login-label">PIN admin<input id="login-pin" type="password" inputmode="numeric" minlength="6" autocomplete="new-password" required /></label>
-        <label id="login-confirm-wrap">Ulangi PIN<input id="login-confirm" type="password" inputmode="numeric" minlength="6" autocomplete="new-password" required /></label>
-        <button class="button button--dark" type="submit" id="login-submit">Buat PIN & masuk</button>
+        <label id="login-label">Kata sandi admin<input id="login-pin" type="password" autocomplete="current-password" required /></label>
+        <button class="button button--dark" type="submit" id="login-submit">Masuk</button>
         <p class="login-error" id="login-error" role="alert"></p>
       </form>
       <p class="login-note">Login diproses secara aman oleh server. Gunakan kata sandi admin dan jangan membagikannya.</p>
