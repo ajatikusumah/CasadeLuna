@@ -37,11 +37,16 @@ async function loadAllSources(){ state.settings=mergeSettings(clone(SETTINGS_DEF
 
 async function loadSource(section) {
   const stored = localStorage.getItem(storageKey(section));
+  let response = await fetch(`/api/content/${section}`).catch(() => null);
+  if (response && response.ok) {
+    const online = await response.json();
+    localStorage.removeItem(storageKey(section));
+    return online;
+  }
   if (stored) {
     try { return JSON.parse(stored); } catch (_) { localStorage.removeItem(storageKey(section)); }
   }
-  let response = await fetch(`/api/content/${section}`).catch(() => null);
-  if (!response || !response.ok) response = await fetch(SOURCES[section].file);
+  response = await fetch(SOURCES[section].file);
   if (!response.ok) throw new Error(`Tidak bisa memuat ${section}`);
   return response.json();
 }
