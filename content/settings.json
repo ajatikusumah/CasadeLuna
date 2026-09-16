@@ -1,0 +1,77 @@
+{
+  "identity": {
+    "siteName": "Casa de Luna",
+    "tagline": "CARE | MERCH | CONSULTANCY",
+    "announcement": "Lebih banyak kucing pulang. Lebih banyak hati yang utuh.",
+    "location": "Bogor",
+    "footerQuote": "gentle care for every paw — a home under the moon",
+    "primaryColor": "#132b45",
+    "accentColor": "#b9684f"
+  },
+  "menu": {
+    "beranda": "Beranda",
+    "tentang": "Tentang",
+    "kucing": "Kucing",
+    "cerita": "Cerita",
+    "petCare": "Pet Care",
+    "shop": "Shop",
+    "kontak": "Kontak",
+    "cta": "Dukung",
+    "showTentang": true,
+    "showKucing": true,
+    "showCerita": true,
+    "showPetCare": true,
+    "showShop": true,
+    "showKontak": true
+  },
+  "contact": {
+    "whatsapp": "6281389888900",
+    "email": "hello@casadeluna.id",
+    "instagram": "https://www.instagram.com/casadeluna19/",
+    "instagramLabel": "@Casadeluna19",
+    "visitHours": "Sabtu–Minggu, 10.00–15.00, dengan janji temu.",
+    "addressNote": "Alamat lengkap dikirimkan setelah konfirmasi melalui WhatsApp.",
+    "donationText": "Dukung perawatan, pakan, dan proses pulang anabul Casa de Luna.",
+    "bank": "",
+    "ewallet": "",
+    "qris": ""
+  },
+  "home": {
+    "metaTitle": "Rumah untuk Pulang — Casa de Luna",
+    "metaDescription": "Rumah untuk pulang — Casa de Luna, shelter kucing di Bogor.",
+    "heroEyebrow": "Casa de Luna · rumah bagi cerita",
+    "heroTitle": "Setiap kucing berhak memiliki tempat untuk pulang.",
+    "heroIntro": "Di Casa de Luna, kucing-kucing yang diselamatkan mendapatkan perawatan dan kesempatan menemukan jalan pulang.",
+    "featuredStory": "Dari Stories of de Luna",
+    "featuredGallery": "Dari Photos Anabul",
+    "shopStatus": "Shop akan segera dibuka.",
+    "maintenance": false
+  },
+  "pages": {
+    "aboutEyebrow": "Tentang Casa de Luna",
+    "aboutTitle": "Rumah bagi cerita, tempat rindu pulang.",
+    "aboutIntro": "Casa de Luna hadir untuk memberi kucing-kucing terlantar ruang aman untuk pulih, bertumbuh, dan menemukan keluarga yang tepat.",
+    "catsEyebrow": "Kenalan dengan anabul",
+    "catsTitle": "Yuk kenalan dengan kita.",
+    "catsIntro": "Profil di bawah adalah pengantar. Untuk status terbaru dan kecocokan adopsi, silakan hubungi kami melalui WhatsApp.",
+    "storiesEyebrow": "Stories of de Luna",
+    "storiesTitle": "Cerita yang tinggal lebih lama di hati.",
+    "storiesIntro": "Materi dan nuansa halaman ini mengikuti perjalanan setiap anabul.",
+    "careEyebrow": "Casa de Luna Pet Care",
+    "careTitle": "Perawatan yang aman, langsung dari rumah rembulan.",
+    "careIntro": "Layanan perawatan untuk kucing sehat, rawat jalan, dan kebutuhan rawat inap.",
+    "shopEyebrow": "Casa de Luna Shop",
+    "shopTitle": "Kebaikan yang bisa dibawa pulang.",
+    "shopIntro": "Shop sedang disiapkan sebagai pintu masuk untuk karya dan barang yang ikut mendukung kehidupan anabul.",
+    "supportEyebrow": "Banyak cara untuk membantu",
+    "supportTitle": "Menjadi bagian dari perubahan.",
+    "supportIntro": "Setiap dukungan membantu Casa de Luna memberi tempat aman, perawatan, dan harapan.",
+    "contactEyebrow": "Hubungi Casa de Luna",
+    "contactTitle": "Mulai dari satu percakapan.",
+    "contactIntro": "Kami berada di area Bogor. Kunjungan dilakukan dengan janji temu untuk menjaga keamanan dan ketenangan shelter."
+  },
+  "access": {
+    "adminUsername": "admin",
+    "sessionMinutes": 60
+  }
+}
