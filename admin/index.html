@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Casa de Luna</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <section class="login-screen" id="login-screen" aria-labelledby="login-title">
+    <div class="login-card">
+      <img src="../assets/casa-de-luna-logo.png" alt="Casa de Luna" />
+      <p class="eyebrow">Casa de Luna · admin</p>
+      <h1 id="login-title">Selamat datang<br /><em>di ruang kerja.</em></h1>
+      <p id="login-description">Buat PIN admin untuk mengunci ruang pengelolaan di perangkat ini.</p>
+      <form id="login-form">
+        <label>Nama pengguna<input id="login-user" type="text" value="admin" autocomplete="username" required /></label>
+        <label id="login-label">PIN admin<input id="login-pin" type="password" inputmode="numeric" minlength="6" autocomplete="new-password" required /></label>
+        <label id="login-confirm-wrap">Ulangi PIN<input id="login-confirm" type="password" inputmode="numeric" minlength="6" autocomplete="new-password" required /></label>
+        <button class="button button--dark" type="submit" id="login-submit">Buat PIN & masuk</button>
+        <p class="login-error" id="login-error" role="alert"></p>
+      </form>
+      <p class="login-note">Login diproses secara aman oleh server. Gunakan kata sandi admin dan jangan membagikannya.</p>
+    </div>
+  </section>
+  <main class="admin-shell">
+    <header class="admin-header">
+      <a class="admin-brand" href="../index.html"><img src="../assets/casa-de-luna-logo.png" alt="Casa de Luna" /><span>Content studio</span></a>
+      <a class="back-link" href="../index.html">Kembali ke website ↗</a>
+    </header>
+    <section class="admin-intro">
+      <p class="eyebrow">Ruang kerja pengelola</p>
+      <h1>Rawat cerita Casa de Luna<br /><em>dengan lebih mudah.</em></h1>
+      <p>Kelola foto, profil kucing, Stories of de Luna, dan panduan Pet Care dari satu halaman. Layout website publik tetap sama.</p>
+    </section>
+    <section class="admin-notice" aria-live="polite">
+      <strong>Mode aman untuk saat ini</strong>
+      <span>Perubahan disimpan sebagai draft dan dapat dipublikasikan langsung ke GitHub setelah login online.</span>
+    </section>
+    <section class="admin-workspace">
+      <aside class="admin-sidebar" aria-label="Jenis konten">
+        <p class="sidebar-label">Kelola konten</p>
+        <button class="tab-button is-active" type="button" data-section="gallery"><span>01</span> Foto galeri <b data-count="gallery">–</b></button>
+        <button class="tab-button" type="button" data-section="cats"><span>02</span> Kucing <b data-count="cats">–</b></button>
+        <button class="tab-button" type="button" data-section="stories"><span>03</span> Stories <b data-count="stories">–</b></button>
+        <button class="tab-button" type="button" data-section="pet-care"><span>04</span> Pet Care <b data-count="pet-care">–</b></button>
+        <p class="sidebar-label sidebar-label--settings">Pengaturan website</p>
+        <button class="tab-button" type="button" data-section="settings"><span>05</span> Identitas & menu <b>⚙</b></button>
+        <button class="tab-button" type="button" data-section="contact"><span>06</span> Kontak & dukung <b>↗</b></button>
+        <button class="tab-button" type="button" data-section="home"><span>07</span> Beranda & SEO <b>⌂</b></button>
+        <button class="tab-button" type="button" data-section="pages"><span>08</span> Halaman website <b>▣</b></button>
+        <button class="tab-button" type="button" data-section="access"><span>09</span> Keamanan admin <b>⌘</b></button>
+        <div class="sidebar-footnote"><span class="status-dot"></span><span id="draft-status">Memuat data…</span></div>
+        <button class="logout-button" type="button" id="logout-button">Keluar dari admin</button>
+      </aside>
+      <section class="editor-panel">
+        <div class="editor-heading"><div><p class="section-kicker" id="section-kicker">Foto galeri</p><h2 id="section-title">Wajah-wajah kecil di rumah rembulan.</h2></div><div class="settings-actions"><button class="button button--dark" id="publish-section" type="button">Simpan online</button><button class="button" id="download-section" type="button">Unduh data</button></div></div>
+        <div id="editor-content" class="editor-content"></div>
+      </section>
+    </section>
+    <footer class="admin-footer"><span>Draft tersimpan di browser ini · Publikasi melalui GitHub</span><button class="text-button" id="download-all" type="button">Unduh semua data JSON ↓</button></footer>
+  </main>
+  <template id="gallery-template"><article class="editor-card" data-item-card><div class="card-number" data-item-number></div><div class="card-fields"><label>Foto / path asset<input data-field="image" type="text" placeholder="assets/photos/nama-foto.jpg" /></label><label>Deskripsi singkat<input data-field="alt" type="text" placeholder="Contoh: Dua kucing sedang tidur" /></label><label>Caption di website<input data-field="caption" type="text" placeholder="Contoh: Saling menemani" /></label><label>Sumber foto<input data-field="source" type="text" placeholder="Photos Anabul" /></label><div class="inline-fields"><label class="check-field"><input data-field="visible" type="checkbox" /> Tampilkan</label><label class="check-field"><input data-field="raised" type="checkbox" /> Posisi naik</label></div></div><button class="remove-button" type="button" data-remove>Hapus</button></article></template>
+  <template id="cats-template"><article class="editor-card" data-item-card><div class="card-number" data-item-number></div><div class="card-fields"><label>Nama kucing<input data-field="name" type="text" /></label><label>Info singkat<input data-field="meta" type="text" /></label><label>Status<input data-field="status" type="text" /></label><label>Cerita singkat<textarea data-field="bio" rows="3"></textarea></label><div class="inline-fields"><label>Anchor ID<input data-field="id" type="text" /></label><label>Inisial<input data-field="initial" type="text" maxlength="1" /></label></div></div><button class="remove-button" type="button" data-remove>Hapus</button></article></template>
+  <template id="stories-template"><article class="editor-card" data-item-card><div class="card-number" data-item-number></div><div class="card-fields"><label>Judul cerita<input data-field="title" type="text" /></label><label>Kategori<input data-field="tag" type="text" /></label><label>Foto / path asset<input data-field="image" type="text" /></label><label>Deskripsi<textarea data-field="description" rows="3"></textarea></label><div class="inline-fields"><label>Label tautan<input data-field="linkLabel" type="text" /></label><label>URL / halaman<input data-field="link" type="text" /></label></div></div><button class="remove-button" type="button" data-remove>Hapus</button></article></template>
+  <template id="pet-care-template"><article class="editor-card" data-item-card><div class="card-number" data-item-number></div><div class="card-fields"><label>Nama kelompok<input data-field="title" type="text" /></label><label>Pengantar<textarea data-field="intro" rows="2"></textarea></label><div class="inline-fields"><label>Anchor ID<input data-field="id" type="text" /></label><label>Nomor<input data-field="number" type="text" maxlength="2" /></label></div><div class="image-list" data-image-list></div></div><button class="remove-button" type="button" data-remove>Hapus kelompok</button></article></template>
+  <template id="settings-template"><div class="settings-grid" data-settings-form></div></template>
+  <script src="admin.js"></script>
+</body>
+</html>
