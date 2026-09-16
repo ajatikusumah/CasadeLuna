@@ -1,0 +1,46 @@
+[
+  {
+    "id": "pakan",
+    "number": "01",
+    "title": "Pakan & nutrisi",
+    "intro": "Panduan sederhana untuk membaca kebutuhan makan anabul dengan lebih tenang.",
+    "images": [
+      {"image": "assets/photos/guides/pakan-wet-vs-kering-hitam.jpg", "caption": "Wet food vs dry food"},
+      {"image": "assets/photos/guides/pakan-panduan-hitam.jpg", "caption": "Panduan pakan yang tepat"},
+      {"image": "assets/photos/guides/pakan-porsi-jadwal-hitam.jpg", "caption": "Porsi & jadwal makan"},
+      {"image": "assets/photos/guides/pakan-usia-kondisi-hitam.jpg", "caption": "Sesuai usia & kondisi"},
+      {"image": "assets/photos/guides/pakan-tanda-cocok-hitam.jpg", "caption": "Tanda pakan cocok"},
+      {"image": "assets/photos/guides/pakan-panduan-oranye.jpg", "caption": "Panduan pakan — koleksi kedua"},
+      {"image": "assets/photos/guides/pakan-wet-vs-kering-oranye.jpg", "caption": "Wet food vs dry food — koleksi kedua"},
+      {"image": "assets/photos/guides/pakan-porsi-jadwal-oranye.jpg", "caption": "Porsi & jadwal — koleksi kedua"},
+      {"image": "assets/photos/guides/pakan-usia-kondisi-oranye.jpg", "caption": "Usia & kondisi — koleksi kedua"},
+      {"image": "assets/photos/guides/pakan-tanda-cocok-oranye.jpg", "caption": "Tanda pakan cocok — koleksi kedua"}
+    ]
+  },
+  {
+    "id": "grooming",
+    "number": "02",
+    "title": "Grooming & mandi",
+    "intro": "Perawatan rutin yang lembut untuk membantu anabul merasa nyaman dan sehat.",
+    "images": [
+      {"image": "assets/photos/guides/grooming-tanda-perlu.jpg", "caption": "Tanda kucing perlu grooming"},
+      {"image": "assets/photos/guides/grooming-kapan.jpg", "caption": "Kapan grooming & mandi?"},
+      {"image": "assets/photos/guides/grooming-kapan-mandi.jpg", "caption": "Kapan perlu mandi?"},
+      {"image": "assets/photos/guides/grooming-tips-aman.jpg", "caption": "Tips grooming yang aman"},
+      {"image": "assets/photos/guides/grooming-cukup-dilap.jpg", "caption": "Kapan cukup dilap saja?"}
+    ]
+  },
+  {
+    "id": "jamur",
+    "number": "03",
+    "title": "Jamur & ringworm",
+    "intro": "Langkah awal mengenali, mencegah penyebaran, dan mencari bantuan yang tepat.",
+    "images": [
+      {"image": "assets/photos/guides/ringworm-apa-itu.jpg", "caption": "Jamur atau ringworm?"},
+      {"image": "assets/photos/guides/ringworm-waspada.jpg", "caption": "Kenapa harus waspada?"},
+      {"image": "assets/photos/guides/ringworm-tanda.jpg", "caption": "Tanda yang perlu dikenali"},
+      {"image": "assets/photos/guides/ringworm-curiga.jpg", "caption": "Kalau curiga ringworm…"},
+      {"image": "assets/photos/guides/ringworm-intinya.jpg", "caption": "Intinya"}
+    ]
+  }
+]
