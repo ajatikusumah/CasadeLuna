@@ -1,0 +1,42 @@
+[
+  {
+    "id": "tatiana",
+    "tag": "Kisah anabul",
+    "title": "Tatiana Olenka",
+    "description": "Sebuah kisah tentang nama, rumah, dan bagaimana kepedulian memberi kesempatan baru untuk pulang.",
+    "image": "assets/photos/casa-story-01.jpg",
+    "alt": "Tatiana Olenka",
+    "linkLabel": "Ikuti cerita di Instagram",
+    "link": "https://www.instagram.com/casadeluna19/"
+  },
+  {
+    "id": "gogon",
+    "tag": "Kisah paliatif",
+    "title": "Gogon, si anak rembulan",
+    "description": "Ada yang hadir sebentar, tetapi cahayanya tinggal lama. Merawat sampai akhir juga merupakan bentuk cinta.",
+    "image": "assets/photos/casa-story-02.jpg",
+    "alt": "Gogon",
+    "linkLabel": "Baca lanjutan",
+    "link": "https://www.instagram.com/casadeluna19/"
+  },
+  {
+    "id": "emergency",
+    "tag": "Cat care",
+    "title": "5 Hal Emergency yang Harus Diketahui Cat Owners",
+    "description": "Catatan praktis untuk mengenali keadaan darurat dan menentukan kapan perlu mencari bantuan dokter hewan.",
+    "image": "assets/photos/casa-story-03.jpg",
+    "alt": "Cat care emergency",
+    "linkLabel": "Lihat layanan Pet Care",
+    "link": "pet-care.html"
+  },
+  {
+    "id": "family",
+    "tag": "Rumah & keluarga",
+    "title": "Satu rumah, banyak cerita",
+    "description": "Sebuah potret sederhana dari ruang perawatan: induk kucing dan anak-anaknya, bersama dalam suasana yang aman dan hangat.",
+    "image": "assets/photos/casa-story-04.jpg",
+    "alt": "Induk kucing bersama anak-anaknya",
+    "linkLabel": "Dukung perawatan mereka",
+    "link": "dukung.html"
+  }
+]
