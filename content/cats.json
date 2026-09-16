@@ -6,7 +6,9 @@
     "status": "Siap kenalan",
     "bio": "Lembut, tenang, dan suka duduk dekat jendela saat sore.",
     "avatarClass": "cat-avatar--luna",
-    "initial": "L"
+    "initial": "L",
+    "image": "assets/photos/casa-cat-01.jpg",
+    "alt": "Luna di Casa de Luna"
   },
   {
     "id": "taro",
@@ -15,7 +17,9 @@
     "status": "Dalam perawatan",
     "bio": "Penasaran dan playful; butuh rumah yang sabar untuk tumbuh bersama.",
     "avatarClass": "cat-avatar--taro",
-    "initial": "T"
+    "initial": "T",
+    "image": "assets/photos/anabul-studio-02.jpg",
+    "alt": "Taro di Casa de Luna"
   },
   {
     "id": "mika",
@@ -24,6 +28,41 @@
     "status": "Siap kenalan",
     "bio": "Manis dan observan, paling bahagia ketika punya sudut aman sendiri.",
     "avatarClass": "cat-avatar--mika",
-    "initial": "M"
+    "initial": "M",
+    "image": "assets/photos/anabul-studio-03.jpg",
+    "alt": "Mika di Casa de Luna"
+  },
+  {
+    "id": "tatiana",
+    "name": "Tatiana Olenka",
+    "meta": "Betina · kisah anabul",
+    "status": "Dikenang dengan hangat",
+    "bio": "Tatiana adalah bagian dari Stories of de Luna—sebuah kisah tentang nama, rumah, dan kesempatan baru.",
+    "avatarClass": "cat-avatar--luna",
+    "initial": "T",
+    "image": "assets/photos/casa-story-01.jpg",
+    "alt": "Tatiana Olenka"
+  },
+  {
+    "id": "gogon",
+    "name": "Gogon",
+    "meta": "Jantan · anak rembulan",
+    "status": "Dikenang dengan hangat",
+    "bio": "Gogon hadir sebentar, tetapi cahayanya tinggal lama. Merawat sampai akhir juga merupakan bentuk cinta.",
+    "avatarClass": "cat-avatar--taro",
+    "initial": "G",
+    "image": "assets/photos/casa-story-02.jpg",
+    "alt": "Gogon, si anak rembulan"
+  },
+  {
+    "id": "anabul-rumah",
+    "name": "Teman-teman rumah",
+    "meta": "Kucing · bersama dalam perawatan",
+    "status": "Dalam perawatan",
+    "bio": "Beberapa anabul saling menemani selama masa pemulihan di rumah rembulan.",
+    "avatarClass": "cat-avatar--mika",
+    "initial": "A",
+    "image": "assets/photos/anabul-studio-06.jpg",
+    "alt": "Teman-teman kucing Casa de Luna"
   }
 ]
