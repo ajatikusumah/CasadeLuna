@@ -40,7 +40,8 @@ async function loadSource(section) {
   if (stored) {
     try { return JSON.parse(stored); } catch (_) { localStorage.removeItem(storageKey(section)); }
   }
-  const response = await fetch(`/api/content/${section}`).catch(() => fetch(SOURCES[section].file));
+  let response = await fetch(`/api/content/${section}`).catch(() => null);
+  if (!response || !response.ok) response = await fetch(SOURCES[section].file);
   if (!response.ok) throw new Error(`Tidak bisa memuat ${section}`);
   return response.json();
 }
