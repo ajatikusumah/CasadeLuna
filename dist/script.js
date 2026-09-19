@@ -21,6 +21,30 @@ fetch("content/settings.json").then(r=>r.ok?r.json():Promise.reject()).then(sett
 }).catch(()=>{});
 
 const galleryContainers=document.querySelectorAll("[data-gallery=photos]");
+let galleryStoryDialog;
+const openGalleryStory=(item)=>{
+  if(!galleryStoryDialog){
+    galleryStoryDialog=document.createElement("dialog");
+    galleryStoryDialog.className="story-dialog";
+    galleryStoryDialog.setAttribute("aria-labelledby","story-dialog-title");
+    galleryStoryDialog.innerHTML=`<div class="story-dialog__card"><button class="story-dialog__close" type="button" aria-label="Tutup cerita">×</button><img class="story-dialog__image" alt="" /><div class="story-dialog__copy"><span class="story-dialog__source"></span><h2 id="story-dialog-title"></h2><p></p></div></div>`;
+    document.body.append(galleryStoryDialog);
+    galleryStoryDialog.querySelector(".story-dialog__close").addEventListener("click",()=>galleryStoryDialog.close());
+    galleryStoryDialog.addEventListener("click",event=>{if(event.target===galleryStoryDialog)galleryStoryDialog.close();});
+  }
+  const image=galleryStoryDialog.querySelector(".story-dialog__image");
+  image.src=item.image;image.alt=item.alt||item.caption||"Foto Casa de Luna";
+  galleryStoryDialog.querySelector(".story-dialog__source").textContent=item.source||"Casa de Luna";
+  galleryStoryDialog.querySelector("h2").textContent=item.caption||"Cerita Casa de Luna";
+  galleryStoryDialog.querySelector("p").textContent=item.story||"Setiap foto menyimpan bagian kecil dari perjalanan di Casa de Luna.";
+  if(typeof galleryStoryDialog.showModal==="function")galleryStoryDialog.showModal();
+};
+const bindGalleryCard=(card,item)=>{
+  card.dataset.galleryStory="true";
+  card.addEventListener("click",event=>{event.preventDefault();openGalleryStory(item);});
+  card.addEventListener("keydown",event=>{if(event.key==="Enter"||event.key===" "){event.preventDefault();openGalleryStory(item);}});
+  if(card.tagName!=="A"){card.tabIndex=0;card.setAttribute("role","button");}
+};
 if(galleryContainers.length){
   fetch("content/gallery.json").then(response=>response.ok?response.json():Promise.reject(new Error("gallery unavailable"))).then(items=>{
     galleryContainers.forEach(container=>{
@@ -31,22 +55,12 @@ if(galleryContainers.length){
         card.className=`cat-gallery-card${item.raised||index%3===1?" cat-gallery-card--raised":""}`;
         if(mode!=="story")card.href="cerita.html#gallery";
         const image=document.createElement("img");image.src=item.image;image.alt=item.alt||item.caption||"Foto Casa de Luna";image.loading=index<3?"eager":"lazy";image.decoding="async";card.append(image);
-        const caption=document.createElement(mode==="story"?"figcaption":"span");caption.textContent=item.caption||item.source||"Casa de Luna";card.append(caption);return card;
+        const caption=document.createElement(mode==="story"?"figcaption":"span");caption.textContent=item.caption||item.source||"Casa de Luna";card.append(caption);
+        bindGalleryCard(card,item);return card;
       }));
     });
   }).catch(()=>{});
 }
-
-const catsContainer=document.querySelector("[data-cats]");
-if(catsContainer){fetch("content/cats.json").then(r=>r.ok?r.json():Promise.reject()).then(items=>{
-  catsContainer.replaceChildren(...items.filter(item=>item.image).map(item=>{
-    const article=document.createElement("article");article.className="profile-card";article.id=item.id;
-    const avatar=document.createElement("div");avatar.className=`cat-avatar ${item.avatarClass||""}`;const image=document.createElement("img");image.src=item.image;image.alt=item.alt||item.name;image.loading="lazy";avatar.append(image);article.append(avatar);
-    const body=document.createElement("div");body.className="profile-body";const status=document.createElement("span");status.className=`status${item.status==="Dalam perawatan"?" status--care":""}`;status.textContent=item.status||"Dalam perawatan";body.append(status);
-    const title=document.createElement("h2");title.textContent=item.name;body.append(title);const meta=document.createElement("p");meta.className="profile-meta";meta.textContent=item.meta||"Kucing Casa de Luna";body.append(meta);const bio=document.createElement("p");bio.textContent=item.bio||"";body.append(bio);
-    const link=document.createElement("a");link.className=`button button--small ${item.status==="Siap diadopsi"?"button--dark":"button--outline"}`;link.href=item.status==="Siap diadopsi"?`https://wa.me/6281389888900?text=${encodeURIComponent(`Halo Casa de Luna, saya ingin kenalan dengan ${item.name}.`)}`:"dukung.html#virtual";link.textContent=item.status==="Siap diadopsi"?`Aku mau kenalan dengan ${item.name} →`:`Dukung ${item.name} secara virtual →`;body.append(link);article.append(body);return article;
-  }));
-}).catch(()=>{});}
 
 // Apply editable copy to every public menu without changing the hand-designed layout.
 fetch("content/settings.json").then(r=>r.ok?r.json():Promise.reject()).then(settings=>{
