@@ -38,5 +38,43 @@
     "alt": "Induk kucing bersama anak-anaknya",
     "linkLabel": "Dukung perawatan mereka",
     "link": "dukung.html"
+  },
+  {
+    "id": "padma",
+    "tag": "Kisah penyelamatan",
+    "title": "Padma: satu pukulan, tiga kaki, satu cinta",
+    "description": "Padma datang dengan kaki yang terluka dan sedang hamil. Setelah amputasi, ia tetap tegar dan memberi kehidupan kepada anak yang membutuhkan.",
+    "image": "assets/photos/padma-and-kittens.jpg",
+    "additionalImages": ["assets/photos/padma-kittens.jpg"],
+    "alt": "Padma bersama anak-anaknya",
+    "linkLabel": "Baca cerita Padma",
+    "link": "#padma"
+  },
+  {
+    "id": "shiero-cicak",
+    "tag": "Kisah rumah rembulan",
+    "title": "Cicak, Tembok dan Waktu yang Berjalan Pelan",
+    "description": "Kilas cerita tentang Shiero, kebiasaan berburu malamnya, dan bagaimana kenangan kecil terasa semakin berarti ketika waktu berjalan pelan.",
+    "image": "assets/photos/shiero-2025-07.jpg",
+    "additionalImages": [
+      "assets/photos/shiero-2021-04.jpg",
+      "assets/photos/shiero-2021-07.jpg",
+      "assets/photos/shiero-2022-01.jpg",
+      "assets/photos/shiero-2025-03.jpg"
+    ],
+    "alt": "Shiero, kucing abu-abu Casa de Luna",
+    "linkLabel": "Baca cerita Shiero",
+    "link": "#shiero-cicak"
+  },
+  {
+    "id": "dunan",
+    "tag": "Cat care",
+    "title": "Diam Itu Bukan Emas: Drama Bisu Dunan Si Gonkor",
+    "description": "Empat perubahan kecil pada perilaku Dunan menjadi bahasa paling jujur bahwa ada sesuatu yang tidak beres.",
+    "image": "assets/photos/dunan.jpg",
+    "additionalImages": ["assets/photos/dunan-with-friends.jpg"],
+    "alt": "Dunan, kucing abu-abu Casa de Luna",
+    "linkLabel": "Baca cerita Dunan",
+    "link": "#dunan"
   }
 ]
