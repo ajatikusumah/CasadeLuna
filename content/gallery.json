@@ -1,5 +1,29 @@
 [
   {
+    "image": "assets/photos/casa-gallery-orange.jpg",
+    "alt": "Kucing oranye Casa de Luna",
+    "caption": "Wajah yang menemani",
+    "source": "Foto Casa de Luna",
+    "raised": false,
+    "visible": true
+  },
+  {
+    "image": "assets/photos/casa-gallery-kittens.jpg",
+    "alt": "Dua anak kucing Casa de Luna",
+    "caption": "Bersama sejak kecil",
+    "source": "Foto Casa de Luna",
+    "raised": true,
+    "visible": true
+  },
+  {
+    "image": "assets/photos/casa-gallery-kitten-close.jpg",
+    "alt": "Anak kucing Casa de Luna",
+    "caption": "Kecil dan berani",
+    "source": "Foto Casa de Luna",
+    "raised": false,
+    "visible": true
+  },
+  {
     "image": "assets/photos/casa-cat-01.jpg",
     "alt": "Dua kucing Casa de Luna saling menemani",
     "caption": "Dua teman seperawatan",
