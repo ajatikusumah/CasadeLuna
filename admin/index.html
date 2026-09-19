@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Admin Casa de Luna</title>
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -16,14 +16,15 @@
       <img src="../assets/casa-de-luna-logo.svg" alt="Casa de Luna" />
       <p class="eyebrow">Casa de Luna · admin</p>
       <h1 id="login-title">Selamat datang<br /><em>di ruang kerja.</em></h1>
-      <p id="login-description">Masukkan kata sandi admin untuk melanjutkan.</p>
+      <p id="login-description">Buat PIN admin untuk mengunci ruang pengelolaan di perangkat ini.</p>
       <form id="login-form">
         <label>Nama pengguna<input id="login-user" type="text" value="admin" autocomplete="username" required /></label>
-        <label id="login-label">Kata sandi admin<input id="login-pin" type="password" autocomplete="current-password" required /></label>
-        <button class="button button--dark" type="submit" id="login-submit">Masuk</button>
+        <label id="login-label">PIN admin<input id="login-pin" type="password" inputmode="numeric" minlength="6" autocomplete="new-password" required /></label>
+        <label id="login-confirm-wrap">Ulangi PIN<input id="login-confirm" type="password" inputmode="numeric" minlength="6" autocomplete="new-password" required /></label>
+        <button class="button button--dark" type="submit" id="login-submit">Buat PIN & masuk</button>
         <p class="login-error" id="login-error" role="alert"></p>
       </form>
-      <p class="login-note">Login diproses secara aman oleh server. Gunakan kata sandi admin dan jangan membagikannya.</p>
+      <p class="login-note">Akses admin dilindungi PIN pada browser ini. Jangan gunakan perangkat bersama untuk mengelola data shelter.</p>
     </div>
   </section>
   <main class="admin-shell">
@@ -38,7 +39,7 @@
     </section>
     <section class="admin-notice" aria-live="polite">
       <strong>Mode aman untuk saat ini</strong>
-      <span>Perubahan disimpan sebagai draft dan dapat dipublikasikan langsung ke GitHub setelah login online.</span>
+      <span>Perubahan disimpan sebagai draft di perangkat ini. Unduh JSON ketika sudah siap untuk dipublikasikan.</span>
     </section>
     <section class="admin-workspace">
       <aside class="admin-sidebar" aria-label="Jenis konten">
@@ -57,11 +58,11 @@
         <button class="logout-button" type="button" id="logout-button">Keluar dari admin</button>
       </aside>
       <section class="editor-panel">
-        <div class="editor-heading"><div><p class="section-kicker" id="section-kicker">Foto galeri</p><h2 id="section-title">Wajah-wajah kecil di rumah rembulan.</h2></div><div class="settings-actions"><button class="button button--dark" id="publish-section" type="button">Simpan online</button><button class="button" id="download-section" type="button">Unduh data</button></div></div>
+        <div class="editor-heading"><div><p class="section-kicker" id="section-kicker">Foto galeri</p><h2 id="section-title">Wajah-wajah kecil di rumah rembulan.</h2></div><button class="button button--dark" id="download-section" type="button">Unduh data</button></div>
         <div id="editor-content" class="editor-content"></div>
       </section>
     </section>
-    <footer class="admin-footer"><span>Draft tersimpan di browser ini · Publikasi melalui GitHub</span><button class="text-button" id="download-all" type="button">Unduh semua data JSON ↓</button></footer>
+    <footer class="admin-footer"><span>Draft tersimpan di browser ini</span><button class="text-button" id="download-all" type="button">Unduh semua data JSON ↓</button></footer>
   </main>
   <template id="gallery-template"><article class="editor-card" data-item-card><div class="card-number" data-item-number></div><div class="card-fields"><label>Foto / path asset<input data-field="image" type="text" placeholder="assets/photos/nama-foto.jpg" /></label><label>Deskripsi singkat<input data-field="alt" type="text" placeholder="Contoh: Dua kucing sedang tidur" /></label><label>Caption di website<input data-field="caption" type="text" placeholder="Contoh: Saling menemani" /></label><label>Sumber foto<input data-field="source" type="text" placeholder="Photos Anabul" /></label><div class="inline-fields"><label class="check-field"><input data-field="visible" type="checkbox" /> Tampilkan</label><label class="check-field"><input data-field="raised" type="checkbox" /> Posisi naik</label></div></div><button class="remove-button" type="button" data-remove>Hapus</button></article></template>
   <template id="cats-template"><article class="editor-card" data-item-card><div class="card-number" data-item-number></div><div class="card-fields"><label>Nama kucing<input data-field="name" type="text" /></label><label>Info singkat<input data-field="meta" type="text" /></label><label>Status<input data-field="status" type="text" /></label><label>Cerita singkat<textarea data-field="bio" rows="3"></textarea></label><div class="inline-fields"><label>Anchor ID<input data-field="id" type="text" /></label><label>Inisial<input data-field="initial" type="text" maxlength="1" /></label></div></div><button class="remove-button" type="button" data-remove>Hapus</button></article></template>
