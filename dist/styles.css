@@ -95,3 +95,17 @@ h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:var(--serif);font-weight:600;line-h
 .footer-logo-window{position:static;width:255px;height:auto;overflow:visible}
 .footer-logo{position:static;display:block;width:255px;height:auto;max-width:100%;object-fit:contain;transform:none;filter:invert(1);mix-blend-mode:screen}
 @media(max-width:760px){.brand-logo-window{width:185px;height:auto}.brand-logo{width:185px}.footer-logo-window{width:230px;height:auto}.footer-logo{width:230px}}
+
+/* Beranda hero carousel */
+.hero-carousel{position:relative;min-height:390px}
+.hero-slides{position:relative;min-height:390px}
+.hero-slide{position:absolute;inset:0;opacity:0;pointer-events:none;visibility:hidden;transition:opacity .45s ease;transform:rotate(2deg)}
+.hero-slide.is-active{opacity:1;pointer-events:auto;visibility:visible}
+.hero-carousel-control{position:absolute;z-index:4;top:50%;display:grid;place-items:center;width:34px;height:34px;border:1px solid rgba(255,255,255,.65);border-radius:50%;background:rgba(19,43,69,.78);color:#fff;font-size:18px;cursor:pointer;transform:translateY(-50%);transition:background .2s,transform .2s}
+.hero-carousel-control:hover{background:var(--terracotta);transform:translateY(-50%) scale(1.06)}
+.hero-carousel-control--prev{left:14px}
+.hero-carousel-control--next{right:14px}
+.hero-carousel-dots{position:absolute;z-index:5;right:0;bottom:-30px;left:0;display:flex;justify-content:center;gap:7px}
+.hero-carousel-dot{width:7px;height:7px;padding:0;border:0;border-radius:50%;background:rgba(19,43,69,.3);cursor:pointer;transition:width .2s,background .2s}
+.hero-carousel-dot.is-active{width:22px;border-radius:99px;background:var(--terracotta)}
+@media(max-width:760px){.hero-carousel,.hero-slides{min-height:300px}.hero-carousel-control{width:31px;height:31px}.hero-carousel-dots{bottom:-24px}}

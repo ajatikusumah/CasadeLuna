@@ -72,3 +72,24 @@ fetch("content/settings.json").then(r=>r.ok?r.json():Promise.reject()).then(sett
   document.querySelectorAll(".home-contact h2").forEach(e=>{if(id.location)e.innerHTML=`Temui Casa de Luna<br /><em>di area ${id.location}.</em>`;});
   document.querySelectorAll(".contact-grid p").forEach(e=>{if(e.textContent.includes("Sabtu")&&contact.visitHours)e.textContent=contact.visitHours;if(e.textContent.includes("Alamat lengkap")&&contact.addressNote)e.textContent=contact.addressNote;});
 }).catch(()=>{});
+
+const heroCarousel=document.querySelector("[data-hero-carousel]");
+if(heroCarousel){
+  const slides=[...heroCarousel.querySelectorAll(".hero-slide")];
+  const dots=[...heroCarousel.querySelectorAll("[data-carousel-dot]")];
+  let current=0; let timer;
+  const showSlide=(index)=>{
+    current=(index+slides.length)%slides.length;
+    slides.forEach((slide,i)=>{slide.classList.toggle("is-active",i===current);slide.setAttribute("aria-hidden",String(i!==current));});
+    dots.forEach((dot,i)=>{dot.classList.toggle("is-active",i===current);dot.setAttribute("aria-selected",String(i===current));});
+  };
+  const start=()=>{clearInterval(timer);timer=setInterval(()=>showSlide(current+1),5500);};
+  heroCarousel.querySelector("[data-carousel-prev]")?.addEventListener("click",()=>{showSlide(current-1);start();});
+  heroCarousel.querySelector("[data-carousel-next]")?.addEventListener("click",()=>{showSlide(current+1);start();});
+  dots.forEach((dot,i)=>dot.addEventListener("click",()=>{showSlide(i);start();}));
+  heroCarousel.addEventListener("mouseenter",()=>clearInterval(timer));
+  heroCarousel.addEventListener("mouseleave",start);
+  heroCarousel.addEventListener("focusin",()=>clearInterval(timer));
+  heroCarousel.addEventListener("focusout",start);
+  showSlide(0);start();
+}
