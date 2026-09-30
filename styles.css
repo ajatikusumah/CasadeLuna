@@ -223,3 +223,8 @@ h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:var(--serif);font-weight:600;line-h
  .story-reference-grid{grid-template-columns:1fr}.story-reference-card>img,.story-reference-image{height:180px}
  .story-reference-filters{gap:6px}.story-reference-filter{padding:7px 9px;font-size:9px}
 }
+
+.story-reference-page .story-reference-support-card{overflow:hidden;min-height:0;padding:0}
+.story-reference-page .story-reference-support-photo{display:block;width:100%;height:118px;object-fit:cover;object-position:center}
+.story-reference-page .story-reference-support-copy{padding:15px 16px 16px}
+@media(max-width:760px){.story-reference-page .story-reference-support-photo{height:160px}.story-reference-page .story-reference-support-copy{padding:13px 15px 15px}}
