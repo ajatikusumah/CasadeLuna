@@ -236,7 +236,7 @@ h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:var(--serif);font-weight:600;line-h
 .story-reference-page .story-reference-hero>p:last-child{max-width:650px;color:rgba(255,255,255,.78);font-size:16px;line-height:1.65}
 .story-reference-page .story-reference-support-card{overflow:hidden;min-height:0;padding:0}
 .story-reference-page .story-reference-support-photo{display:block;width:100%;height:140px;object-fit:cover;object-position:center 70%}
-.story-reference-page .story-reference-support-photo--padma{object-position:center 94%}
+.story-reference-page .story-reference-support-photo--padma{object-position:center 60%}
 .story-reference-page .story-reference-support-photo--olenka{object-position:center 55%}
 .story-reference-page .story-reference-support-photo--marina{object-position:center}
 .story-reference-page .story-reference-support-copy{padding:15px 16px 16px}
