@@ -16,8 +16,9 @@ fetch("content/settings.json").then(r=>r.ok?r.json():Promise.reject()).then(sett
   document.querySelectorAll("a[href*='wa.me']").forEach(el=>{if(contact.whatsapp){const url=new URL(el.href);url.pathname=`/${contact.whatsapp}`;el.href=url.toString();}});
   document.querySelectorAll("a[href^='mailto:']").forEach(el=>{if(contact.email){el.href=`mailto:${contact.email}`;el.textContent=contact.email;}});
   document.querySelectorAll("a[href*='instagram.com']").forEach(el=>{if(contact.instagram)el.href=contact.instagram;if(contact.instagramLabel&&el.classList.contains("contact-link"))el.textContent=contact.instagramLabel;});
-  if(home.metaTitle)document.title=home.metaTitle;
-  const desc=document.querySelector("meta[name='description']");if(desc&&home.metaDescription)desc.content=home.metaDescription;
+  const currentPage=location.pathname.split("/").pop();
+  if((!currentPage||currentPage==="index.html")&&home.metaTitle)document.title=home.metaTitle;
+  const desc=document.querySelector("meta[name='description']");if((!currentPage||currentPage==="index.html")&&desc&&home.metaDescription)desc.content=home.metaDescription;
 }).catch(()=>{});
 
 const galleryContainers=document.querySelectorAll("[data-gallery=photos]");
@@ -67,7 +68,7 @@ fetch("content/settings.json").then(r=>r.ok?r.json():Promise.reject()).then(sett
   const p=settings.pages||{}, home=settings.home||{}, id=settings.identity||{}, contact=settings.contact||{};
   const path=location.pathname.split("/").pop()||"index.html";
   const map=path==="tentang.html"?{eyebrow:p.aboutEyebrow,title:p.aboutTitle,intro:p.aboutIntro}:path==="kucing.html"?{eyebrow:p.catsEyebrow,title:p.catsTitle,intro:p.catsIntro}:path==="cerita.html"?{eyebrow:p.storiesEyebrow,title:p.storiesTitle,intro:p.storiesIntro}:path==="pet-care.html"?{eyebrow:p.careEyebrow,title:p.careTitle,intro:p.careIntro}:path==="shop.html"?{eyebrow:p.shopEyebrow,title:p.shopTitle,intro:p.shopIntro}:path==="dukung.html"?{eyebrow:p.supportEyebrow,title:p.supportTitle,intro:p.supportIntro}:path==="kontak.html"?{eyebrow:p.contactEyebrow,title:p.contactTitle,intro:p.contactIntro}:{eyebrow:home.heroEyebrow,title:home.heroTitle,intro:home.heroIntro};
-  const hero=document.querySelector(".page-hero,.home-hero"); if(hero){const e=hero.querySelector(".eyebrow");if(e&&map.eyebrow)e.textContent=map.eyebrow;const t=hero.querySelector("h1");if(t&&map.title)t.textContent=map.title;const i=hero.querySelector(".hero-intro,.page-hero>p:last-child");if(i&&map.intro)i.textContent=map.intro;}
+  const hero=document.querySelector(".page-hero,.home-hero"); if(hero){const e=hero.querySelector(".eyebrow");if(e&&map.eyebrow)e.textContent=map.eyebrow;const t=hero.querySelector("h1");if(t&&map.title){if(path==="tentang.html"){const parts=map.title.split(", ");if(parts.length>1){t.replaceChildren(document.createTextNode(parts[0]+","),document.createElement("br"),Object.assign(document.createElement("em"),{textContent:parts.slice(1).join(", ")}));}else t.textContent=map.title;}else t.textContent=map.title;}const i=hero.querySelector(".hero-intro,.page-hero-intro,.page-hero>p:last-child");if(i&&map.intro)i.textContent=map.intro;}
   document.querySelectorAll(".site-footer .footer-quote").forEach(e=>{if(id.footerQuote)e.textContent=id.footerQuote;});
   document.querySelectorAll(".home-contact h2").forEach(e=>{if(id.location)e.innerHTML=`Temui Casa de Luna<br /><em>di area ${id.location}.</em>`;});
   document.querySelectorAll(".contact-grid p").forEach(e=>{if(e.textContent.includes("Sabtu")&&contact.visitHours)e.textContent=contact.visitHours;if(e.textContent.includes("Alamat lengkap")&&contact.addressNote)e.textContent=contact.addressNote;});
