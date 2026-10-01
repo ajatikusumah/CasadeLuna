@@ -241,3 +241,5 @@ h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:var(--serif);font-weight:600;line-h
 .story-reference-page .story-reference-support-photo--marina{object-position:center}
 .story-reference-page .story-reference-support-copy{padding:15px 16px 16px}
 @media(max-width:760px){.story-reference-page .story-reference-hero{padding:63px 9vw 57px}.story-reference-page .story-reference-support-photo{height:160px}.story-reference-page .story-reference-support-copy{padding:13px 15px 15px}}
+
+.home-hero h1{color:var(--navy)}
