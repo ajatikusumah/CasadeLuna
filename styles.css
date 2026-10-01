@@ -245,3 +245,4 @@ h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:var(--serif);font-weight:600;line-h
 .home-hero h1{color:var(--navy)}
 
 .page-hero h1{color:var(--navy)}
+.page-hero--navy h1{color:#fff}
