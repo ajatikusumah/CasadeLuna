@@ -6,7 +6,7 @@ document.querySelectorAll(".main-nav a").forEach(link=>link.addEventListener("cl
 const year=document.querySelector("#year");if(year)year.textContent=new Date().getFullYear();
 
 // The public layout stays hand-designed; settings only replace copy, links and visibility.
-fetch("content/settings.json").then(r=>r.ok?r.json():Promise.reject()).then(settings=>{
+fetch("content/settings.json?v=20261017-books-sale").then(r=>r.ok?r.json():Promise.reject()).then(settings=>{
   const id=settings.identity||{}, menu=settings.menu||{}, contact=settings.contact||{}, home=settings.home||{};
   const announcement=document.querySelector(".announcement"); if(announcement&&id.announcement)announcement.innerHTML=`<span>✦</span> ${id.announcement} <span>✦</span>`;
   document.querySelectorAll(".brand-tagline").forEach(el=>{if(id.tagline)el.textContent=id.tagline;});
@@ -64,7 +64,7 @@ if(galleryContainers.length){
 }
 
 // Apply editable copy to every public menu without changing the hand-designed layout.
-fetch("content/settings.json").then(r=>r.ok?r.json():Promise.reject()).then(settings=>{
+fetch("content/settings.json?v=20261017-books-sale").then(r=>r.ok?r.json():Promise.reject()).then(settings=>{
   const p=settings.pages||{}, home=settings.home||{}, id=settings.identity||{}, contact=settings.contact||{};
   const pathPart=location.pathname.split("/").filter(Boolean).pop()||"index.html";const path=document.querySelector(".page-hero--about")?"tentang.html":document.querySelector(".cats-page-grid")?"kucing.html":document.querySelector(".support-page-grid")?"dukung.html":pathPart.includes(".")?pathPart:`${pathPart}.html`;
   const map=path==="tentang.html"?{eyebrow:p.aboutEyebrow,title:p.aboutTitle,intro:p.aboutIntro}:path==="kucing.html"?{eyebrow:p.catsEyebrow,title:p.catsTitle,intro:p.catsIntro}:path==="cerita.html"?{eyebrow:p.storiesEyebrow,title:p.storiesTitle,intro:p.storiesIntro}:path==="pet-care.html"?{eyebrow:p.careEyebrow,title:p.careTitle,intro:p.careIntro}:path==="shop.html"?{eyebrow:p.shopEyebrow,title:p.shopTitle,intro:p.shopIntro}:path==="dukung.html"?{eyebrow:"Casa de Luna · rumah bagi cerita",title:"Setiap kucing berhak memiliki tempat untuk pulang.",intro:"Di Casa de Luna, kucing-kucing yang diselamatkan mendapatkan perawatan dan kesempatan menemukan jalan pulang."}:path==="kontak.html"?{eyebrow:p.contactEyebrow,title:p.contactTitle,intro:p.contactIntro}:{eyebrow:home.heroEyebrow,title:home.heroTitle,intro:home.heroIntro};
