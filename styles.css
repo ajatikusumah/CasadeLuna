@@ -248,7 +248,7 @@ h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:var(--serif);font-weight:600;line-h
 .page-hero--navy h1{color:#fff}
 
 /* Shop book collection */
-.shop-books{background:#f6efe4}
+.shop-books{background:#f6efe4;scroll-margin-top:110px}
 .shop-books-heading{max-width:720px;margin:0 auto 38px;text-align:center}
 .shop-books-heading h2{margin-bottom:12px;font-size:clamp(30px,4vw,45px)}
 .shop-books-heading>p:last-child{color:var(--muted)}
