@@ -246,3 +246,22 @@ h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:var(--serif);font-weight:600;line-h
 
 .page-hero h1{color:var(--navy)}
 .page-hero--navy h1{color:#fff}
+
+/* Shop book collection */
+.shop-books{background:#f6efe4}
+.shop-books-heading{max-width:720px;margin:0 auto 38px;text-align:center}
+.shop-books-heading h2{margin-bottom:12px;font-size:clamp(30px,4vw,45px)}
+.shop-books-heading>p:last-child{color:var(--muted)}
+.shop-book-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.shop-book-card{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:22px;padding:20px;background:#fffdfa;border:1px solid var(--line);box-shadow:0 10px 28px rgba(19,43,69,.06)}
+.shop-book-covers{display:grid;grid-template-columns:1fr 1fr;align-content:start;gap:9px}
+.shop-book-covers figure{margin:0;min-width:0}
+.shop-book-covers img{width:100%;aspect-ratio:2/3;object-fit:cover;border:1px solid rgba(19,43,69,.12);box-shadow:0 5px 14px rgba(19,43,69,.10)}
+.shop-book-covers figcaption{padding:7px 0;color:var(--muted);font-size:10px;text-align:center}
+.shop-book-copy{align-self:center}
+.shop-book-kicker{margin:0 0 8px;color:var(--terracotta);font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+.shop-book-copy h3{margin:0 0 12px;font-size:clamp(22px,2vw,28px);line-height:1.13}
+.shop-book-review{margin:0 0 17px;color:#59656e;font-family:var(--serif);font-size:13px;line-height:1.65}
+.shop-book-copy .text-link{font-size:10px}
+@media(max-width:1100px){.shop-book-grid{grid-template-columns:1fr}.shop-book-card{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}}
+@media(max-width:600px){.shop-books-heading{margin-bottom:27px;text-align:left}.shop-book-card{grid-template-columns:1fr;gap:12px;padding:15px}.shop-book-covers{gap:12px}.shop-book-covers figcaption{font-size:11px}.shop-book-copy h3{font-size:26px}.shop-book-review{font-size:14px}}
